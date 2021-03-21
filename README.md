@@ -84,4 +84,4 @@ npm run serve
 
 ## ©️<span id="License"></span>License
 
-[License MIT](LICENSE)
+[Apache-2.0 License](LICENSE)
