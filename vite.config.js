@@ -15,7 +15,9 @@ module.exports = {
       },
       // 输出
       output: {
-
+        entryFileNames: `static/js/[name].js`, // 入口
+        chunkFileNames: `static/js/[name].js`, // 块
+        assetFileNames: `static/[ext]/[name].[ext]` // 资源
       }
     },
     // 设置打包静态文件输出目录名称

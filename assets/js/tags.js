@@ -1,12 +1,12 @@
 import '../css/common.css'
-import '../sass/home.scss'
+import '../sass/tags.scss'
 
-console.log("I'm home.js")
+console.log("I'm tags.js")
 
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Home Page'
+    message: 'Tags Page'
   }
 })
 
