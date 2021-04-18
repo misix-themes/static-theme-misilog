@@ -16,7 +16,7 @@ module.exports = {
       // 输出
       output: {
         entryFileNames: `static/js/[name].js`, // 入口
-        chunkFileNames: `static/js/[name].js`, // 块
+        chunkFileNames: `static/js/[name].js`, // 块资源
         assetFileNames: `static/[ext]/[name].[ext]` // 资源
       }
     },

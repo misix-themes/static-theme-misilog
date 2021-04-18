@@ -6,13 +6,22 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
+  <script src="https://unpkg.com/vue@next"></script>
 </head>
 
-<body>
+<body theme="default">
   <div id="app">
-    <div v-text="message"></div>
+    <!-- 头部 -->
+    <div class="header">
+      <div v-text="message"></div>
+    </div>
+
+    <!-- 内容主体区域 -->
+    <div class="content"></div>
+
+    <!-- 底部 -->
+    <div class="footer"></div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script type="module" src="/assets/js/home.js"></script>
 </body>
 
