@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
   <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script>
   <title>
-    首页
+    <%= htmlWebpackPlugin.options.title %>
   </title>
-<link href="/static/js/chunk-vendors.js" rel="preload" as="script"><link href="/static/js/index.js" rel="preload" as="script"></head>
+</head>
 
 <body>
   <noscript>
-    <strong>We're sorry but 首页 doesn't work properly without JavaScript enabled.
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
   </noscript>
   <div id="app">
@@ -31,6 +31,6 @@
       <div v-text="footerName"></div>
     </div>
   </div>
-<script type="text/javascript" src="/static/js/chunk-vendors.js"></script><script type="text/javascript" src="/static/js/index.js"></script></body>
+</body>
 
 </html>
