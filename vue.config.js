@@ -1,7 +1,10 @@
 module.exports = {
+  // 打包后静态资源根路径
   // publicPath: 'https://blog.misitebao.com/',
   assetsDir: 'static',
+  // 打包文件hash
   filenameHashing: false,
+  // 抽取css生成文件
   css: {
     extract: "true"
   },
@@ -34,6 +37,7 @@ module.exports = {
     }
   },
   configureWebpack: {
+    // 设置外部依赖
     externals: {
       'vue/dist/vue.esm-bundler.js': 'Vue'
     }

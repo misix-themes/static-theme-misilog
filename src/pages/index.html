@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+  <!-- <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script> -->
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
@@ -24,7 +25,9 @@
     </div>
     <!-- 主体内容 -->
     <div class="content">
-      <div>{<name>}</div>
+      <img alt="Vue logo" src="<%= BASE_URL %>static/images/logo.png">
+      <div>{[name]}</div>
+      <App msg="hello" />
     </div>
     <!-- 底部 -->
     <div class="footer">

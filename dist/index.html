@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="/favicon.ico">
-  <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+  <!-- <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script> -->
   <title>
     首页
   </title>
-<link href="/static/js/chunk-vendors.js" rel="preload" as="script"><link href="/static/js/index.js" rel="preload" as="script"></head>
+<link href="/static/css/index.css" rel="preload" as="style"><link href="/static/js/chunk-vendors.js" rel="preload" as="script"><link href="/static/js/index.js" rel="preload" as="script"><link href="/static/css/index.css" rel="stylesheet"></head>
 
 <body>
   <noscript>
@@ -24,7 +25,9 @@
     </div>
     <!-- 主体内容 -->
     <div class="content">
-      <div>{<name>}</div>
+      <img alt="Vue logo" src="/static/images/logo.png">
+      <div>{[name]}</div>
+      <App msg="hello" />
     </div>
     <!-- 底部 -->
     <div class="footer">

@@ -5,7 +5,7 @@ import useFooter from './common/useFooter.js'
 
 createApp({
   compilerOptions: {
-    delimiters: ['{<', '>}'],
+    delimiters: ['{[', ']}'],
     comments: true
   },
   setup() {
