@@ -1,1 +1,0 @@
-import"./dynamic-import-polyfill.js";/* empty css     */Vue.createApp({setup(e){const{name:o}={name:Vue.ref("header useHeader")},{name:r}={name:Vue.ref("footer useFooter")};return console.log("setup"),{headerName:o,footerName:r}}}).mount("#app");
