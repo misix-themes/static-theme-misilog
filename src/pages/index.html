@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="">
+  <head>
+    <!-- 元信息 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="misitebao,misilog,blog,theme,博客主题,米司特包" />
+    <meta name="author" content="Misitebao <i@misitebao.com>" />
+    <meta name="generator" content="Static template source code" />
+    <meta name="copyright" content="Misitebao" />
+    <!-- 默认加载资源 -->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <!-- 引入包含模板编译器的vue库 -->
+    <% if(process.env.NODE_ENV === 'development'){ %>
+    <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+    <% } else { %>
+    <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script>
+    <% } %>
+    <!-- 网页标题 -->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- 打包生成资源 -->
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
-  <!-- <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script> -->
-  <title>
-    <%= htmlWebpackPlugin.options.title %>
-  </title>
-</head>
-
-<body>
-  <noscript>
-    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
-        Please enable it to continue.</strong>
-  </noscript>
-  <div id="app">
-    <!-- 头部 -->
-    <div class="header">
-      <div v-text="headerName"></div>
+  <body>
+    <noscript>
+      <div><strong>很抱歉，如果没有启用 JavaScript，页面将无法正常工作。</strong></div>
+    </noscript>
+    <div id="app">
+      <!-- 头部 -->
+      <div class="header">
+        <div v-text="headerName"></div>
+      </div>
+      <!-- 主体内容 -->
+      <div class="content">
+        <img alt="Vue logo" src="<%= BASE_URL %>images/logo.png" />
+        <div>{[name]}</div>
+        <App msg="hello" />
+      </div>
+      <!-- 底部 -->
+      <div class="footer">
+        <div v-text="footerName"></div>
+      </div>
     </div>
-    <!-- 主体内容 -->
-    <div class="content">
-      <img alt="Vue logo" src="<%= BASE_URL %>static/images/logo.png">
-      <div>{[name]}</div>
-      <App msg="hello" />
-    </div>
-    <!-- 底部 -->
-    <div class="footer">
-      <div v-text="footerName"></div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

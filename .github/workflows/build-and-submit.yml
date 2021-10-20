@@ -1,0 +1,31 @@
+name: Automatically build and submit | 自动构建并提交
+on:
+  push:
+    branches:[main]
+    paths:
+      - './'
+jobs:
+  build-and-submit:
+    name: Build and submit | 构建并提交
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout | 切换到部署分支
+        uses: actions/checkout@v2
+        with:
+          ref: "main"
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup the Nodejs environment | 设置Nodejs环境
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.18.1
+
+      - name: Install dependencies and build | 安装依赖并构建
+        run: npm install && npm run build
+
+      - name: Automatic submission | 自动提交
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: "${{ secrets.AUTO_SUBMISSION }}"
+          commit_message: "Generate packaged resources"

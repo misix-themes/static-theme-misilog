@@ -1,13 +1,14 @@
 module.exports = {
   // 打包后静态资源根路径
   // publicPath: 'https://blog.misitebao.com/',
-  assetsDir: 'static',
+  assetsDir: '',
   // 打包文件hash
   filenameHashing: false,
   // 抽取css生成文件
   css: {
     extract: "true"
   },
+  productionSourceMap: false,
   pages: {
     index: {
       // page 的入口
