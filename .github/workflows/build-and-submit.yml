@@ -2,8 +2,6 @@ name: Automatically build and submit | 自动构建并提交
 on:
   push:
     branches:[main]
-    paths:
-      - './'
 jobs:
   build-and-submit:
     name: Build and submit | 构建并提交
