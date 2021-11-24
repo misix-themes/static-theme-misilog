@@ -5,11 +5,25 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <meta name="description" content="" />
+  <meta
+    name="keywords"
+    content="misitebao,misilog,blog,theme,博客主题,米司特包"
+  />
+  <meta name="author" content="Misitebao <i@misitebao.com>" />
+  <meta name="generator" content="Static template source code" />
+  <meta name="copyright" content="Misitebao" />
+  <!-- 默认加载资源 -->
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+  <!-- 引入包含模板编译器的vue库 -->
+  <% if(process.env.NODE_ENV === 'development'){ %>
+  <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+  <% } else { %>
   <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script>
-  <title>
-    <%= htmlWebpackPlugin.options.title %>
-  </title>
+  <% } %>
+  <!-- 网页标题 -->
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <!-- 打包生成资源 -->
 </head>
 
 <body>
