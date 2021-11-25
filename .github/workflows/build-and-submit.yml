@@ -29,4 +29,5 @@ jobs:
         uses: devops-infra/action-commit-push@master
         with:
           github_token: "${{ secrets.AUTO_SUBMISSION }}"
+          commit_prefix: "[AUTO-COMMIT]"
           commit_message: "Generate packaged resources"
