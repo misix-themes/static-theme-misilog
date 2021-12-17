@@ -1,4 +1,4 @@
-name: Pre Build
+name: Pre Build | 预构建
 on:
   push:
     branches: [main]
@@ -29,4 +29,5 @@ jobs:
         run: |
           node -v &&
           npm -v &&
+          npm install && 
           npm run build
