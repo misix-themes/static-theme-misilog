@@ -12,7 +12,7 @@
     <img alt="Standard-Repository" src="https://img.shields.io/badge/Readme--Style-standard--repository-brightgreen?style=flat-square&color=f83500"/>
   </a>
   <a href="https://github.com/misitebao/static-theme-misilog/actions/workflows/pre-build.yml">
-    <img alt="Pre Build" src="https://img.shields.io/github/workflow/status/misitebao/static-theme-misilog/Pre%20Build%20%7C%20预构建/main?style=flat-square"/>
+    <img alt="Pre Build" src="https://img.shields.io/github/workflow/status/misitebao/static-theme-misilog/Pre%20Build%20%7C%20预构建/main?style=flat-square&logo=github"/>
   </a>
 </p>
 
