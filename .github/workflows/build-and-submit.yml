@@ -1,14 +1,15 @@
 name: Automatically build and submit | 自动构建并提交
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    tags:
+      - "v*"
 
 jobs:
   build-and-submit:
     name: Build and submit | 构建并提交
     runs-on: ubuntu-latest
+    if: github.repository == 'misitebao/static-theme-misilog'
+
     steps:
       - name: Checkout | 切换到部署分支
         uses: actions/checkout@v2
@@ -20,7 +21,7 @@ jobs:
       - name: Setup the Nodejs environment | 设置Nodejs环境
         uses: actions/setup-node@v2
         with:
-          node-version: 14.18.1
+          node-version: 16.13.1
 
       - name: Install dependencies and build | 安装依赖并构建
         run: npm install && npm run build
