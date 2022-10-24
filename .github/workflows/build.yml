@@ -1,4 +1,4 @@
-name: Pre Build | 预构建
+name: Build | 构建
 on:
   push:
     branches: [main]
@@ -23,7 +23,7 @@ jobs:
       - name: Setup the Nodejs environment | 设置Nodejs环境
         uses: actions/setup-node@v2
         with:
-          node-version: 16.13.1
+          node-version: 16.17.0
 
       - name: Build | 构建
         run: |

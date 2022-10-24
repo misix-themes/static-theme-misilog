@@ -1,6 +1,6 @@
 module.exports = {
   content: ['./*.html'],
-  darkMode: 'class',
+  darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     screens: {
       sm: '640px',
@@ -20,5 +20,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

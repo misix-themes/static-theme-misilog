@@ -1,13 +1,15 @@
-import { createApp } from 'petite-vue';
+import Alpine from 'alpinejs';
 
-import { TestHooks } from '@/hooks/useHeader';
+import './styles/main.scss';
+import '@fortawesome/fontawesome-free/css/fontawesome.css';
+import '@fortawesome/fontawesome-free/css/regular.css';
+import '@fortawesome/fontawesome-free/css/brands.css';
+import '@fortawesome/fontawesome-free/css/solid.css';
 
-import './styles/main.css';
+import theme from '../../hooks/theme';
 
-createApp({
-  pageName: 'index',
-  pingFunc() {
-    console.log(`pong ${this.pageName} page`);
-    TestHooks();
-  },
-}).mount('#app');
+window.Alpine = Alpine;
+
+Alpine.data('theme', theme);
+
+Alpine.start();

@@ -2,26 +2,26 @@ name: Automatically build and submit | 自动构建并提交
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
 jobs:
   build-and-submit:
     name: Build and submit | 构建并提交
     runs-on: ubuntu-latest
-    if: github.repository == 'misitebao/static-theme-misilog'
+    if: github.repository == 'misix-themes/static-theme-misilog'
 
     steps:
       - name: Checkout | 切换到部署分支
         uses: actions/checkout@v2
         with:
-          ref: "main"
+          ref: 'main'
           submodules: true
           fetch-depth: 0
 
       - name: Setup the Nodejs environment | 设置Nodejs环境
         uses: actions/setup-node@v2
         with:
-          node-version: 16.13.1
+          node-version: 16.17.0
 
       - name: Install dependencies and build | 安装依赖并构建
         run: npm install && npm run build
@@ -29,6 +29,6 @@ jobs:
       - name: Automatic submission | 自动提交
         uses: devops-infra/action-commit-push@master
         with:
-          github_token: "${{ secrets.AUTO_SUBMISSION }}"
-          commit_prefix: ""
-          commit_message: "[AUTO-COMMIT] Generate packaged resources"
+          github_token: '${{ secrets.GITHUB_TOKEN }}'
+          commit_prefix: ''
+          commit_message: 'release: ${{  github.ref_name }}'
